@@ -39,7 +39,6 @@ app.post("/login", (req, res) => {
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
   });
-
   spotifyApi
     .authorizationCodeGrant(code)
     .then((data) => {
